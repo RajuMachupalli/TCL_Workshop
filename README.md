@@ -15,6 +15,7 @@ create a vsdsynth file with help of vim, and add the text as follows to popout a
 
 Change the vsdsynth files permission to available as a command, The below figure shows how the permission changes make it a command and output.
 
-![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/cb5101fc-11df-4705-baff-d47937f6e028)
+![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/7a0ad8d1-88e4-4ba9-b111-db3255d0c3a0)
+
 
 
