@@ -13,7 +13,8 @@ create a vsdsynth file with help of vim, and add the text as follows to popout a
 
 ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/89c7cee0-ee46-4b21-a9bc-56f0cf55af2d)
 
-change the vsdsynth files permission to available as command, The below figure shows how the change permision changes the file.
+Change the vsdsynth files permission to available as a command, The below figure shows how the permission changes make it a command and output.
 
-![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/96b3b2b0-d053-4ec1-8c63-958b9534930d)
+![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/cb5101fc-11df-4705-baff-d47937f6e028)
+
 
