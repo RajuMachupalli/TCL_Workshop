@@ -17,5 +17,22 @@ Change the vsdsynth files permission to available as a command, The below figure
 
 ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/7a0ad8d1-88e4-4ba9-b111-db3255d0c3a0)
 
+## Convert inputs
+1. ### Create variables###
+  Create a variable that points to the files present in the input .csv file.
+
+2. ### Check files/directory existance###
+  Check the files or directory existance in at the location, if no file exit the program or if no directory create an empty directory.
+  
+  ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/b47e2d9a-7a09-45e5-8afe-f92dd197db98)
+
+3. ### Identify INPUT, OUTPUT and CLOCKs in csv file ###
+  find COLCK, INPU and OUTPUT ports starting row in .csv file
+  ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/6facee43-41df-43c0-aee3-38bc4794758b)
+
+
+4.  ### Set the SDC constraints ###
+
+5.  
 
 
