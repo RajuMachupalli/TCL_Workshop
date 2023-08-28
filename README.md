@@ -33,6 +33,10 @@ Change the vsdsynth files permission to available as a command, The below figure
 
 4.  ### Set the SDC constraints ###
 
-5.  
+5.  ### Create timing file for OpenTimer ###
+  First, eliminate [] in .sdc file so that we can index the lines in sdc file. 
+  >puts -nonewline $tmp_file [string map {"\[" "" "\]" ""} [read $sdc]]
+ncjsdbc
+6.  
 
 
