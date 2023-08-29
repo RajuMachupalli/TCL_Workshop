@@ -42,21 +42,21 @@ Change the vsdsynth files permission to available as a command, The below figure
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/6facee43-41df-43c0-aee3-38bc4794758b)
 
   An example code snippet for creating input constraints is shown in following two figures, first figure set the port's constrainst parameters and read from .csv file. in the second figure the the ports are identified as single-bit or multi-bit port so that a * is added to the contsrainst. Similar script except refence and constraint format id changed for CLOCK and OUTPUT ports constrainst. refer vsdsynth.tcl for full details.
-  
-  ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/9f4eabb4-dffd-4e7f-b0cf-fabfc8c357a7)
-
-  Create input constraints
-  
+    
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/8f66bfd2-f18d-4d70-96ee-58a4cd34b99d)
 
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/82fa2c46-2631-4f92-8e13-ba51aca8938d)
 
-  similarly create output constarinst.
+  Sript creates an output .sdc constraints file as shown below to use for **Yosys** tool. refer .sdc file in output directory.
+
+  ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/a4b06310-e146-4a8a-92e8-4252d6366bee)
 
 4.  ### Set design hierarchy ###
+   Set the design file hierarchy before run the sysnthesis.
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/beb75d1f-f9d8-402e-8f9a-073ebf32c857)
 
-5. ### Run Yosys tool for synthesis ###
+5. ### Run synthesis ###
+  Run **Yosys** tool for synthesis. the 
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/0d406188-d6dc-446d-9a95-95eae40fbab8)
   
 
