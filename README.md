@@ -107,4 +107,6 @@ Final Output is:
 
 
 
-
+# Support #
+Thanks to [VSD Systems](https://www.vlsisystemdesign.com/about-us/) and Kunal Ghosh for the couse materials.
+Specials thanks to all the contributors of Opensource softwares like **Yosys**, **OpenTimer**, **Linux**
