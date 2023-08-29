@@ -29,6 +29,7 @@ Change the vsdsynth files permission to available as a command, The below figure
 
 2. ### Check file/directory validity ###
   Check the files or directory in .csv are valid? if any file does not exist then the program produce error, if no directory then creates an empty directory.
+  
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/b47e2d9a-7a09-45e5-8afe-f92dd197db98)
 
 3. ### Identify INPUT, OUTPUT and CLOCKs in constraints csv file ###
@@ -36,11 +37,11 @@ Change the vsdsynth files permission to available as a command, The below figure
 
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/f464048c-7603-47ea-8f05-bbcc46588b74)
 
-  In the following script, we identify the CLOCK, INPUT, OUTPUT words in .csv file and generate the .sdc file.  
+  In the following script, we identify the CLOCK, INPUT, OUTPUT words in .csv file and used as reference to access respective ports.  
 
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/6facee43-41df-43c0-aee3-38bc4794758b)
 
-  Create clock constraints
+  An example code snippet for creating input constraints is shown in following two figures, first figure set the port's constrainst parameters and read from .csv file. in the second figure the the ports are identified as single-bit or multi-bit port so that a * is added to the contsrainst. Similar script except refence and constraint format id changed for CLOCK and OUTPUT ports constrainst. refer vsdsynth.tcl for full details.
   
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/9f4eabb4-dffd-4e7f-b0cf-fabfc8c357a7)
 
