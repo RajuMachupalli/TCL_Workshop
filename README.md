@@ -4,12 +4,17 @@
 ## Steps
 We will design a user interface for synthesis and timing analysis in the workshop. The synthesis tool is **YOSYS**, and **OpenTimer** for timing analysis. The user interface takes a .csv file containing the directory info of design, constraints, and output. The design process is divided into four parts:
 1. Create a UNIX command with the .csv file as input argument.
-2. Convert the inputs to format [1] & SDC, and feed them to **YOSYS** tool.
-3. Convert format [1] files to format [2] and feed to **OpenTimer** tool.
-4. The outputs from **OpenTimer** are format and display.
+2. Generate design constarints for **YOSYS** tool, and Synthesize the design.
+3. Reformat the constraints file for **OpenTimer** tool, and run timing analysis.
+4. Dispaly the output from **OpenTimer** on command line.
 
+   Basic knowledge of TCL scripting is necessary to understand the document, we are not expalining the each command here. The document provides an overview of steps necessary to create an UI in tools automation.
+   The synthesis/timing analysis requires design files, constarints, and library. It is very hard to provide each file as commond argument, instead we can privde the path to file directory and ask the tool to extarct the necessary information. In this workshop the necessary files directories are provided in an .csv file, as shown in the below figure
+    ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/bc89e6a1-cb72-448d-8afb-7219fb8858fd)
+
+   
 ## UNIX command creation
-create a vsdsynth file with help of vim, and add the text as follows to popout at the run time. the first line *#!/bin/tcsh -f* make the file as shell command. **echo " "** command to display the text. **set** will assign the *my_work_dir* variable to the current working directory. 
+create a ***vsdsynth*** file with help of vim, and add the text as follows. The first line *#!/bin/tcsh -f* make the file as shell command. **echo " "** command to display the text. **set** will assign the *my_work_dir* variable to the current working directory. 
 
 ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/89c7cee0-ee46-4b21-a9bc-56f0cf55af2d)
 
@@ -17,7 +22,7 @@ Change the vsdsynth files permission to available as a command, The below figure
 
 ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/7a0ad8d1-88e4-4ba9-b111-db3255d0c3a0)
 
-## Convert inputs
+## Create Design constrainst for Yosys 
 1. ### Create variables ###
   Create a variable that points to the files present in the input .csv file. Read the first column of .csv and create variable name without space, assign column as value to variable.
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/fc3f0713-4892-4e68-b4e8-0426fefa8f41)
