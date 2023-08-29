@@ -29,9 +29,20 @@ Change the vsdsynth files permission to available as a command, The below figure
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/b47e2d9a-7a09-45e5-8afe-f92dd197db98)
 
 3. ### Identify INPUT, OUTPUT and CLOCKs in csv file ###
-  find COLCK, INPU and OUTPUT ports starting row in .csv file
+  find clock, inpu and output ports starting row in .csv file
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/6facee43-41df-43c0-aee3-38bc4794758b)
 
+  Create clock constraints
+  
+  ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/9f4eabb4-dffd-4e7f-b0cf-fabfc8c357a7)
+
+  Create input constraints
+  
+  ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/8f66bfd2-f18d-4d70-96ee-58a4cd34b99d)
+
+  ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/82fa2c46-2631-4f92-8e13-ba51aca8938d)
+
+  similarly create output constarinst.
 
 4.  ### Set the SDC constraints ###
 
