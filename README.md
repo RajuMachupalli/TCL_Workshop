@@ -13,7 +13,7 @@ We will design a user interface for synthesis and timing analysis in the worksho
     ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/bc89e6a1-cb72-448d-8afb-7219fb8858fd)
 
    
-## UNIX command creation
+## UNIX command creation ##
 create a ***vsdsynth*** file with help of vim, and add the text as follows. The first line *#!/bin/tcsh -f* make the file as shell command. **echo " "** command to display the text. **set** will assign the *my_work_dir* variable to the current working directory. 
 
 ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/89c7cee0-ee46-4b21-a9bc-56f0cf55af2d)
@@ -22,13 +22,13 @@ Change the vsdsynth files permission to available as a command, The below figure
 
 ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/7a0ad8d1-88e4-4ba9-b111-db3255d0c3a0)
 
-## Create Design constrainst for Yosys 
+## Create Design constrainst for Yosys ##
 1. ### Create variables ###
-  Create a variable that points to the files present in the input .csv file. Read the first column of .csv and create variable name without space, assign column as value to variable.
+  The inputs for tool is in .csv file, we need to create a variable that points to the files or directories. Read the first column of .csv and create variable name without space, assign second column data as value to the variables. 
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/fc3f0713-4892-4e68-b4e8-0426fefa8f41)
 
 
-2. ### Check files/directory existance ###
+2. ### Check files/directory validity ###
   Check the files or directory existance in at the location, if no file exit the program  produce error, if no directory then create an empty directory.
   
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/b47e2d9a-7a09-45e5-8afe-f92dd197db98)
