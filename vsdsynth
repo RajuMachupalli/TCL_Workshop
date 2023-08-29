@@ -1,0 +1,37 @@
+#!/bin/tcsh -f
+echo 
+echo
+echo " User interface creation as a part of TCL workshop"
+echo " Supported by Kunal Ghosh from VLSI System Design Corporation Pvt. ltd."
+echo 
+echo " Developed by Raju Machupalli"
+echo
+
+set my_work_dir = 'pwd'
+
+#********************************************************#
+#******** Tool initialization ***************************#
+#********************************************************#
+
+if ($#argv != 1) then
+	echo "Info: Please provide the csv file"
+	exit 1
+endif
+
+if (! -f $argv[1] || $argv[1] == '-help') then
+	if ($argv[1] != '-help') then
+		echo "Error: Cannot find csv file $argv[1]. exiting..."
+		exit 1
+	else
+		echo USAGE: ./vsdsynth \<csv file\>
+		echo	where \<csv file\> consists of 2 columns, below keyword being in 1st column and is case sensitive. please request VSD team for sample csv file
+		echo 	\<Design Name\> is the name of top level module
+		echo	\<Output Directory\> is the name of output directory where you want to dump synthesis script, synthesized netlist and timing report
+		echo 	\<Netlist Directory\> is the name of the directory where all RTL netlist are present
+		echo 	\<Early Library Path\> is the file path of early cell library to be used for STA
+		echo	\<Late Library Path\> is file path of the late cell library to be used for STA
+		echo	\<Constraints\> is csv file path of constraints to be used for STA
+	endif
+else
+	tclsh vsdsynth.tcl $argv[1]
+endif
