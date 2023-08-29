@@ -56,7 +56,10 @@ Change the vsdsynth files permission to available as a command, The below figure
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/beb75d1f-f9d8-402e-8f9a-073ebf32c857)
 
 5. ### Run synthesis ###
-  Run **Yosys** tool for synthesis. the 
+  To run **Yosys** tool for synthesis. create a $DesignName.ys file with scripts as shown in figure, refer tool for details. Run the synthesis in UNIX shell using follwing command
+  > exec yosys -s $OutputDirectory/$DesignName.ys >& $OutputDirectory/$DesignName.synthesis.log
+  The synthesis log output si stored in .synthesis.log file and synthesized netlist file is written in .synth.v in output directory.
+
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/0d406188-d6dc-446d-9a95-95eae40fbab8)
   
 
