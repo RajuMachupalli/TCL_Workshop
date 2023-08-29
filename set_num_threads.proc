@@ -1,0 +1,26 @@
+proc set_multi_cpu_usage {args} {
+        array set options {-localCpu <number_of_threads> -help ""}
+        #foreach {switch value} [array get options] {
+        #       puts "Option $switch is $value"
+        #}
+        while {[llength $args]} {
+                #puts "length is [llength $args]"
+                #puts "lindex 0 of \"$args\" is [lindex $args 0]"
+                switch -glob -- [lindex $args 0] {
+                        -localCpu {
+                                #puts "old args is $args"
+                                set args [lassign $args - option(-localCpu)]
+                                #puts "new arg is $args"
+                                puts "set_num_threads $option(-localCpu)"
+                        }
+                        -help {
+                                #puts "old args is $args"
+                                set args [lassign $args - option(-help)]
+                                #puts "new arg is $args"
+                                puts "Usage: set_multi_cpuusage -localCpu <number_of_threads"
+                        }
+                }
+        }
+
+}
+
