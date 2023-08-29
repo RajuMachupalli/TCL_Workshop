@@ -18,12 +18,12 @@ Change the vsdsynth files permission to available as a command, The below figure
 ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/7a0ad8d1-88e4-4ba9-b111-db3255d0c3a0)
 
 ## Convert inputs
-1. ### Create variables###
+1. ### Create variables ###
   Create a variable that points to the files present in the input .csv file. Read the first column of .csv and create variable name without space, assign column as value to variable.
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/fc3f0713-4892-4e68-b4e8-0426fefa8f41)
 
 
-2. ### Check files/directory existance###
+2. ### Check files/directory existance ###
   Check the files or directory existance in at the location, if no file exit the program  produce error, if no directory then create an empty directory.
   
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/b47e2d9a-7a09-45e5-8afe-f92dd197db98)
@@ -44,9 +44,18 @@ Change the vsdsynth files permission to available as a command, The below figure
 
   similarly create output constarinst.
 
-4.  ### Set the SDC constraints ###
+4.  ### Set design hierarchy ###
+  ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/beb75d1f-f9d8-402e-8f9a-073ebf32c857)
 
-5.  ### Create timing file for OpenTimer ###
+5. ### Run Yosys tool for synthesis ###
+  ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/0d406188-d6dc-446d-9a95-95eae40fbab8)
+  
+
+6. 
+
+7.  
+
+8.  ### Create timing file for OpenTimer ###
   First, eliminate [] in .sdc file so that we can index the lines in sdc file. 
   >puts -nonewline $tmp_file [string map {"\[" "" "\]" ""} [read $sdc]]
 
