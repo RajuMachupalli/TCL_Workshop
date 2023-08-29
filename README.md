@@ -27,14 +27,17 @@ Change the vsdsynth files permission to available as a command, The below figure
   The inputs for tool is in .csv file, we need to create a variable that points to the files or directories. Read the first column of .csv and create variable name without space, assign second column data as value to the variables. 
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/fc3f0713-4892-4e68-b4e8-0426fefa8f41)
 
-
-2. ### Check files/directory validity ###
-  Check the files or directory existance in at the location, if no file exit the program  produce error, if no directory then create an empty directory.
-  
+2. ### Check file/directory validity ###
+  Check the files or directory in .csv are valid? if any file does not exist then the program produce error, if no directory then creates an empty directory.
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/b47e2d9a-7a09-45e5-8afe-f92dd197db98)
 
-3. ### Identify INPUT, OUTPUT and CLOCKs in csv file ###
-  find clock, inpu and output ports starting row in .csv file
+3. ### Identify INPUT, OUTPUT and CLOCKs in constraints csv file ###
+  The designs constarinst are provided in the .csv file, it is very easy is add or modify at .csv. But, the **Yosys** tool take the constraints in .sdc format, so we need to extract the data from .csv file and write an .sdc file. Example constraints.csv is shown below, CLOCK, INPU, OUTPUT are the words used to identify the respective constrainst. 
+
+  ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/f464048c-7603-47ea-8f05-bbcc46588b74)
+
+  In the following script, we identify the CLOCK, INPUT, OUTPUT words in .csv file and generate the .sdc file.  
+
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/6facee43-41df-43c0-aee3-38bc4794758b)
 
   Create clock constraints
