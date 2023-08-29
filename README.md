@@ -61,8 +61,18 @@ Change the vsdsynth files permission to available as a command, The below figure
   The synthesis log output si stored in .synthesis.log file and synthesized netlist file is written in .synth.v in output directory.
 
   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/0d406188-d6dc-446d-9a95-95eae40fbab8)
-  
 
+## Create constraints for timing analysis ##
+1. ### Modify netlist ###
+The netlist produced by **Yosys** has "/" mark at ports connect which is not needed for **OpenTimer** as shown in the below figure, so will remove the "/" in the netlist file fisrt by the looping the script
+"while {[gets $fid line] != -1} {
+        puts -nonewline $output [string map {"\\" ""} $line]
+        puts -nonewline $output "\n"
+}"
+
+![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/9bd49ea2-844a-4211-83db-b1b0a811ab6e)
+
+2. 
 6. 
 
 7.  
