@@ -64,15 +64,26 @@ Change the vsdsynth files permission to available as a command, The below figure
 
 ## Create constraints for timing analysis ##
 1. ### Modify netlist ###
-The netlist produced by **Yosys** has "/" mark at ports connect which is not needed for **OpenTimer** as shown in the below figure, so will remove the "/" in the netlist file fisrt by the looping the script
-"while {[gets $fid line] != -1} {
-        puts -nonewline $output [string map {"\\" ""} $line]
-        puts -nonewline $output "\n"
-}"
+The netlist produced by **Yosys** has "/" mark at ports connect which is not needed for **OpenTimer** as shown in the below figure, so will remove the "/" in the netlist file by folowing script.
+> while {[gets $fid line] != -1} {
+>        puts -nonewline $output [string map {"\\" ""} $line]
+>        puts -nonewline $output "\n"
+> }
 
 ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/9bd49ea2-844a-4211-83db-b1b0a811ab6e)
 
-2. 
+2. ### Create constraints ###
+   Instead of continue writing the vsdsynth.tcl script, we created a procs, which will help to create a functions in TCL and call as needed. we created a read_sdc.proc to read the existing .sdc file and generate modified constarint file. The following figure shows the difference representing same constraints file. For **OpenTimer** the bus ports are expanded and all constarints for a port is written in single line. we need to write the script to get and generate the modified .timing file. **OpenTimer** takes .timing file as constarint file.
+   ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/cab6d82d-7b7f-4e23-baa8-478d05d07738)
+ 
+ below code snippet shows the scropt in procs to convert clock constarinst, similar logic is extended for the ports. refet */procs_raju/read_sdc.proc* for full details. 
+ ![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/1930f072-053d-4ca4-9374-f4cffed7b3d2)
+
+at the end of sdc convertion, we have to expend the multi-bit ports, the multi-bit ports are identified based on "*" at the end of the port in original constrainst. Code snippet is shown below.
+![image](https://github.com/RajuMachupalli/TCL_Workshop/assets/52839597/ead21920-15fa-4473-9d82-d70b81c37b9a)
+
+
+4. 
 6. 
 
 7.  
